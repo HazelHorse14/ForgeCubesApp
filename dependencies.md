@@ -12,3 +12,5 @@
 - markdown react-native-enriched-markdown
 - vector icons @expo/vector-icons
 - GitHub API octokit.js
+- http axios
+- 
