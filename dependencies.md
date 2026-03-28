@@ -11,3 +11,4 @@
 - code highlighting react-native-code-highlighter
 - markdown react-native-enriched-markdown
 -vector icons @expo/vector-icons
+-GitHub API octokit.js
