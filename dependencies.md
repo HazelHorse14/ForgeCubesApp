@@ -3,3 +3,4 @@
   - /assets/seti-icons   ← SVG originali (dal repo Seti)
   - /components/icons    ← componenti generati (TS)
   - /utils/fileIcons.ts  ← mapping
+- File size filesize  
