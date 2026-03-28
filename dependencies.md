@@ -1,2 +1,5 @@
 - GraphQL Apollo Client
-- 
+- Seti icons react-native-svg
+  - /assets/seti-icons   ← SVG originali (dal repo Seti)
+  - /components/icons    ← componenti generati (TS)
+  - /utils/fileIcons.ts  ← mapping
