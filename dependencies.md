@@ -17,4 +17,5 @@
 - Json built-in JS
 - nanoid
 - application information expo-application
+- primer @primer/react  @primer/octicons-react
 - 
