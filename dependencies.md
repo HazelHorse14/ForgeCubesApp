@@ -16,4 +16,5 @@
 - date and number formatting and parsing dayjs
 - Json built-in JS
 - nanoid
+- application information expo-application
 - 
