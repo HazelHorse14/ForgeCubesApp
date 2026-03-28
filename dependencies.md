@@ -15,4 +15,5 @@
 - http axios
 - date and number formatting and parsing dayjs
 - Json built-in JS
+- nanoid
 - 
