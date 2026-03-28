@@ -13,4 +13,5 @@
 - vector icons @expo/vector-icons
 - GitHub API octokit.js
 - http axios
+- date and number formatting and parsing dayjs
 - 
