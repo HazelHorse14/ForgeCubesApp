@@ -9,4 +9,4 @@
 - logging   @expo/log-box
   - already included
 - code highlighting react-native-code-highlighter
-- 
+- markdown react-native-enriched-markdown
