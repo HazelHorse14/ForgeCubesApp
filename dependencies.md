@@ -4,3 +4,5 @@
   - /components/icons    ← componenti generati (TS)
   - /utils/fileIcons.ts  ← mapping
 - File size filesize  
+- routing   expo-router  already included
+- logging   @expo/log-box already included
