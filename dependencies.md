@@ -8,3 +8,5 @@
   - already included
 - logging   @expo/log-box
   - already included
+- code highlighting react-native-code-highlighter
+- 
