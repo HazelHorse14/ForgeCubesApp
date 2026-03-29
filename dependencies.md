@@ -24,4 +24,3 @@
 - dayjs-plugin-relativeTime
 - expo-linking
 - Built-in URL and URLSearchParams
-- 
