@@ -54,9 +54,13 @@ const httpLink = new HttpLink({
 // Shared client instance – call `createGithubClient(token)` after login or
 // on app start once the token has been loaded from SecureStore.
 // ---------------------------------------------------------------------------
+import introspection from './graphql/fragment-matcher.generated';
+
 export const githubClient = new ApolloClient({
   link: ApolloLink.from([authLink, httpLink]),
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({
+    possibleTypes: introspection.possibleTypes,
+  }),
   defaultOptions: {
     watchQuery: { fetchPolicy: 'cache-and-network' },
   },
