@@ -19,3 +19,4 @@
 - application information expo-application
 - primer @primer/react  @primer/octicons-react
 - state zustand
+-share expo-sharing expo-file-system
