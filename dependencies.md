@@ -23,4 +23,5 @@
 - @react-native-async-storage/async-storage expo-secure-store
 - dayjs-plugin-relativeTime
 - expo-linking
+- Built-in URL and URLSearchParams
 - 
