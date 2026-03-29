@@ -21,4 +21,5 @@
 - state zustand
 - share expo-sharing expo-file-system
 - @react-native-async-storage/async-storage expo-secure-store
+- dayjs-plugin-relativeTime
 - 
