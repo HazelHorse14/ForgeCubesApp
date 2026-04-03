@@ -1,0 +1,15 @@
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
+const SvgWasm = (props: SvgProps) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width={24}
+    height={24}
+    {...props}
+  >
+    <Path d="M7 7v18h18V7h-7c0 1-1 2-2 2s-2-1-2-2zm5.2 10h1.2l.9 3.45.9-3.45h.9l.9 3.45.9-3.45h1.2l-1.5 6h-1.05l-.9-3.9c-.3 1.41-.5 2.52-.9 3.9H13.7zm7.95 0h1.8l1.5 6H22.1l-.3-1.5h-1.5L20 23h-1.35zm1.05 1.2h-.3l-.45 2.25h1.2z" />
+  </Svg>
+);
+export default SvgWasm;

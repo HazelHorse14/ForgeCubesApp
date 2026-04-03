@@ -1,0 +1,12 @@
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
+const SvgReasonml = (props: SvgProps) => (
+  <Svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+    <Path
+      fillRule="evenodd"
+      d="M6 6h20v20H6zm7.002 12.177v2.349h1.453c.808 0 1.278-.415 1.278-1.191 0-.754-.47-1.158-1.278-1.158zm5.911-1.595h6.042v1.595h-4.043v1.431h3.649v1.584l-3.649.011v1.443h4.152v1.595h-6.151zm-1.049 7.659h-2.262l-1.114-2.12h-1.486v2.12h-2v-7.659h3.442c2.032 0 3.19.983 3.19 2.687 0 1.159-.48 2.011-1.365 2.47z"
+    />
+  </Svg>
+);
+export default SvgReasonml;

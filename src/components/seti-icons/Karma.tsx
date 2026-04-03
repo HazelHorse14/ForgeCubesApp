@@ -1,0 +1,18 @@
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
+const SvgKarma = (props: SvgProps) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width={24}
+    height={24}
+    {...props}
+  >
+    <Path
+      fill="#8CC148"
+      d="M9 7.4v4.8l3.3 12.5h1.5v-5h.8l3.4 5h5l-5.9-8.9v-.5l5.5-8h-5.3l-2.7 4.4h-.8V7.4z"
+    />
+  </Svg>
+);
+export default SvgKarma;

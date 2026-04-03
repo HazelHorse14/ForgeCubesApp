@@ -1,0 +1,15 @@
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
+const SvgNunjucks = (props: SvgProps) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width={24}
+    height={24}
+    {...props}
+  >
+    <Path d="m20.7 12.6-1.2.4c-.3-1-1.4-4.1-3.4-4.1s-3.2 3.2-3.5 4.1l-1.4-.4L8.3 22l3.6 1.1 2.9-9.4-1.3-.4c.3-1.1 1.4-3.4 2.5-3.4s2.1 2.3 2.4 3.4l-1.5.5 2.9 9.4 3.6-1.1z" />
+  </Svg>
+);
+export default SvgNunjucks;

@@ -1,0 +1,22 @@
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
+const SvgCrystalEmbedded = (props: SvgProps) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width={24}
+    height={24}
+    {...props}
+  >
+    <Path
+      fill="#dfdfdf"
+      d="m16 3.851-5.26 3.037-5.261 3.038v12.148l5.26 3.037L16 28.15l5.26-3.038 5.261-3.037V9.926l-5.26-3.038z"
+    />
+    <Path
+      fill="#fff"
+      d="m14.077 21.025-5.646-4.758 5.646-4.75 1.307 1.324-4.155 3.41 4.155 3.45zm3.846-9.508 5.646 4.75-5.646 4.757-1.298-1.323 4.146-3.418-4.146-3.443z"
+    />
+  </Svg>
+);
+export default SvgCrystalEmbedded;

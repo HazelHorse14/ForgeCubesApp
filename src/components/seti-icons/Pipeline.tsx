@@ -1,0 +1,15 @@
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
+const SvgPipeline = (props: SvgProps) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width={24}
+    height={24}
+    {...props}
+  >
+    <Path d="M19 21.25h-6.1a3.1 3.1 0 0 0-.322-.75l7.922-7.927A2.9 2.9 0 0 0 22 13a3 3 0 1 0-2.9-3.75h-6.2a3 3 0 1 0 0 1.5h6.2a3.1 3.1 0 0 0 .322.75l-7.919 7.927a2.9 2.9 0 0 0-1.5-.427 3 3 0 1 0 2.897 3.75H19V25h5.99v-6H19zm-8.99-9.75a1.5 1.5 0 1 1 1.059-.439 1.5 1.5 0 0 1-1.062.439zm11.986-3A1.5 1.5 0 1 1 20.5 10a1.5 1.5 0 0 1 1.493-1.5zm-11.986 15a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.503 1.5zm10.488-3h3v3h-3z" />
+  </Svg>
+);
+export default SvgPipeline;
