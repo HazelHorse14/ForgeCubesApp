@@ -7,6 +7,14 @@ import '@/global.css';
 
 import { Platform } from 'react-native';
 
+export interface ThemePalette {
+  readonly text: string;
+  readonly background: string;
+  readonly backgroundElement: string;
+  readonly backgroundSelected: string;
+  readonly textSecondary: string;
+}
+
 export const Colors = {
   light: {
     text: '#000000',
@@ -22,9 +30,9 @@ export const Colors = {
     backgroundSelected: '#2E3135',
     textSecondary: '#B0B4BA',
   },
-} as const;
+} as const satisfies Record<string, ThemePalette>;
 
-export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
+export type ThemeColor = keyof ThemePalette;
 
 export const Fonts = Platform.select({
   ios: {
