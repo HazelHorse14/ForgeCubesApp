@@ -1,0 +1,75 @@
+import 'package:ferry/ferry.dart';
+import 'package:flutter/material.dart';
+import 'package:forgecubes/graphql/github.data.gql.dart';
+import 'package:forgecubes/graphql/github.req.gql.dart';
+import 'package:forgecubes/graphql/github.var.gql.dart';
+import 'package:forgecubes/graphql/schema.schema.gql.dart';
+import 'package:forgecubes/models/auth.dart';
+import 'package:forgecubes/scaffolds/list_stateful.dart';
+import 'package:forgecubes/utils/utils.dart';
+import 'package:forgecubes/widgets/app_bar_title.dart';
+import 'package:forgecubes/widgets/commit_item.dart';
+import 'package:provider/provider.dart';
+
+class GhCommits extends StatelessWidget {
+  final String owner;
+  final String name;
+  final String? branch;
+  GhCommits(this.owner, this.name, {this.branch});
+
+  Widget _buildStatus(GStatusState? state) {
+    const size = 18.0;
+    switch (state) {
+      case GStatusState.SUCCESS:
+        return Icon(Octicons.check, color: GithubPalette.open, size: size);
+      case GStatusState.FAILURE:
+        return Icon(Octicons.x, color: GithubPalette.closed, size: size);
+      default:
+        return Container();
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListStatefulScaffold<GCommitsRefCommit_history_nodes, String?>(
+      title: AppBarTitle("commits"),
+      fetch: (cursor) async {
+        final req = GCommitsReq((b) {
+          b.vars.owner = owner;
+          b.vars.name = name;
+          b.vars.hasRef = branch != null;
+          b.vars.ref = branch ?? '';
+          b.vars.after = cursor;
+        });
+        final OperationResponse<GCommitsData, GCommitsVars?> res = await context
+            .read<AuthModel>()
+            .gqlClient
+            .request(req)
+            .first;
+        final ref =
+            res.data!.repository!.defaultBranchRef ??
+            res.data!.repository!.ref!;
+        final history = (ref.target as GCommitsRefCommit).history;
+        return ListPayload(
+          cursor: history.pageInfo.endCursor,
+          hasMore: history.pageInfo.hasNextPage,
+          items: history.nodes ?? [],
+        );
+      },
+      itemBuilder: (p) {
+        final login = p.author?.user?.login;
+        return CommitItem(
+          url: p.url,
+          avatarUrl: p.author?.avatarUrl,
+          avatarLink: login == null ? null : '/github/$login',
+          message: p.messageHeadline,
+          author: login ?? p.author!.name,
+          createdAt: p.committedDate,
+          widgets: p.status == null
+              ? null
+              : [SizedBox(width: 4), _buildStatus(p.status!.state)],
+        );
+      },
+    );
+  }
+}
